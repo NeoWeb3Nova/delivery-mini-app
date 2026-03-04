@@ -29,6 +29,37 @@
 
 ---
 
+## 📱 界面预览
+
+### 用户端 (User App)
+
+![用户端预览](./user-app/user-image.png)
+
+### 骑手端 (Rider App)
+
+![骑手端预览](./rider-app/rider-image.png)
+
+---
+
+## 🎨 设计原型
+
+本项目的 UI 设计原型使用 **Pencil MCP** 工具构建。Pencil 是一个专业的设计文件工具，支持：
+
+- **跨平台设计** - 同时输出 Web、iOS、Android 多平台设计稿
+- **团队协作** - 设计与开发无缝衔接
+- **代码生成** - 支持导出为多种开发框架的组件代码
+
+### 设计文件位置
+
+| 应用 | 设计文件 |
+|------|----------|
+| 用户端 | `user-app/pencil-user.pen` |
+| 骑手端 | `rider-app/pencil-rider.pen` |
+
+> **注意**: `.pen` 文件需要使用 Pencil 工具打开，可从 [Pencil 官网](https://pencil.evolus.vn/) 下载安装。
+
+---
+
 ## ✨ 功能特性
 
 ### 🧑‍💼 用户端 (`user-app/`)
@@ -77,6 +108,7 @@
 | 数据库 | NoSQL（uniCloud MongoDB 兼容） |
 | UI 组件 | uni-ui、SCSS |
 | 构建工具 | HBuilderX |
+| 设计工具 | Pencil MCP |
 
 ---
 
@@ -102,11 +134,14 @@ delivery-mini-app/
 │   │   └── TabBar/                 # 标签栏
 │   │
 │   ├── 📁 static/                  # 静态资源
+│   │   ├── user-image.png          # 用户端预览图
 │   │   └── tabbar/                 # 标签栏图标
 │   │
-│   ├── ☁️ uniCloud-aliyun/          # 云函数和数据库
-│   │   ├── cloudfunctions/         # 云函数
-│   │   └── database/               # 数据库 Schema
+│   ├── ✏️ pencil-user.pen           # Pencil 设计原型
+│   │
+│   ├── ☁️ uniCloud-aliyun/         # 云函数和数据库
+│   │   ├── cloudfunctions/        # 云函数
+│   │   └── database/              # 数据库 Schema
 │   │
 │   └── 📄 配置文件
 │       ├── manifest.json           # 应用配置
@@ -116,19 +151,26 @@ delivery-mini-app/
 ├── 🛵 rider-app/                   # 骑手端小程序
 │   ├── 📄 pages/
 │   │   ├── index/                  # 首页 / 抢单大厅
-│   │   ├── active-order/           # 进行中订单
-│   │   ├── detail/                 # 订单详情
-│   │   ├── orders/                 # 订单历史
-│   │   ├── profile/                # 骑手资料
-│   │   ├── rider-code/             # 骑手二维码
-│   │   └── success/                # 配送完成
+│   │   ├── active-order/          # 进行中订单
+│   │   ├── detail/                # 订单详情
+│   │   ├── orders/                # 订单历史
+│   │   ├── profile/              # 骑手资料
+│   │   ├── rider-code/           # 骑手二维码
+│   │   └── success/              # 配送完成
 │   │
 │   ├── 🧩 components/
 │   │   └── BottomNav/
 │   │
+│   ├── 📁 static/
+│   │   └── rider-image.png        # 骑手端预览图
+│   │
+│   ├── ✏️ pencil-rider.pen         # Pencil 设计原型
+│   │
 │   ├── ☁️ uniCloud-aliyun/
 │   └── 📄 配置文件
 │
+├── 📝 README.md                    # 中文版自述文件
+├── 📝 README_en.md                 # English README
 └── 📝 .gitignore                   # Git 忽略规则
 ```
 
@@ -166,12 +208,6 @@ cd delivery-mini-app
 3. 获取你的 AppID
 4. 在 `manifest.json` 中配置你的 AppID
 5. 在 HBuilderX 偏好设置中设置微信开发者工具路径
-
----
-
-## 📱 界面预览
-
-> 即将添加...
 
 ---
 

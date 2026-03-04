@@ -29,6 +29,37 @@ The project leverages **uniCloud** (Aliyun) for serverless backend services, ena
 
 ---
 
+## 📱 Screenshots
+
+### User App
+
+![User App Preview](./user-app/user-image.png)
+
+### Rider App
+
+![Rider App Preview](./rider-app/rider-image.png)
+
+---
+
+## 🎨 Design Prototypes
+
+The UI design prototypes for this project were built using **Pencil MCP** tool. Pencil is a professional design file tool that supports:
+
+- **Cross-platform Design** - Output Web, iOS, Android designs simultaneously
+- **Team Collaboration** - Seamless design-development workflow
+- **Code Generation** - Export component code for various development frameworks
+
+### Design Files Location
+
+| Application | Design File |
+|-------------|-------------|
+| User App | `user-app/pencil-user.pen` |
+| Rider App | `rider-app/pencil-rider.pen` |
+
+> **Note**: `.pen` files can be opened with Pencil tool. Download from [Pencil Official Website](https://pencil.evolus.vn/).
+
+---
+
 ## ✨ Features
 
 ### 🧑‍💼 User App (`user-app/`)
@@ -77,6 +108,7 @@ The project leverages **uniCloud** (Aliyun) for serverless backend services, ena
 | Database | NoSQL (uniCloud MongoDB-compatible) |
 | UI Components | uni-ui, SCSS |
 | Build Tool | HBuilderX |
+| Design Tool | Pencil MCP |
 
 ---
 
@@ -102,7 +134,10 @@ delivery-mini-app/
 │   │   └── TabBar/                # Tab bar
 │   │
 │   ├── 📁 static/                  # Static assets
+│   │   ├── user-image.png          # User app preview
 │   │   └── tabbar/                 # Tab bar icons
+│   │
+│   ├── ✏️ pencil-user.pen           # Pencil design prototype
 │   │
 │   ├── ☁️ uniCloud-aliyun/          # Cloud functions & database
 │   │   ├── cloudfunctions/         # Serverless functions
@@ -126,9 +161,16 @@ delivery-mini-app/
 │   ├── 🧩 components/
 │   │   └── BottomNav/
 │   │
+│   ├── 📁 static/
+│   │   └── rider-image.png        # Rider app preview
+│   │
+│   ├── ✏️ pencil-rider.pen         # Pencil design prototype
+│   │
 │   ├── ☁️ uniCloud-aliyun/
 │   └── 📄 Configuration files
 │
+├── 📝 README.md                    # Chinese README
+├── 📝 README_en.md                 # English README
 └── 📝 .gitignore                   # Git ignore rules
 ```
 
@@ -166,12 +208,6 @@ cd delivery-mini-app
 3. Obtain your AppID
 4. Configure `manifest.json` with your AppID
 5. Set WeChat DevTools path in HBuilderX preferences
-
----
-
-## 📱 Screenshots
-
-> Coming soon...
 
 ---
 
