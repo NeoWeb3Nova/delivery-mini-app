@@ -1,0 +1,60 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "抢单大厅",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/orders/orders",
+			"style": {
+				"navigationBarTitleText": "订单管理",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "抢单详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/success/success",
+			"style": {
+				"navigationBarTitleText": "抢单结果",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/active-order/active-order",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/rider-code/rider-code",
+			"style": {
+				"navigationBarTitleText": "骑手码",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "闪电跑腿骑手端",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#f8f7f5"
+	},
+	"uniIdRouter": {}
+}

@@ -1,0 +1,75 @@
+// 文档教程：https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["sender_address", "receiver_address", "item_type", "item_weight", "total_price", "user_id"],
+	"permission": {
+		"read": "true",
+		"create": "true",
+		"update": "auth == true",
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "用户 UUID",
+			"forceDefaultValue": {
+				"$env": "uid"
+			}
+		},
+		"sender_address": {
+			"bsonType": "object",
+			"description": "发件人地址信息",
+			"properties": {
+				"province": { "bsonType": "string", "description": "省" },
+				"city": { "bsonType": "string", "description": "市" },
+				"district": { "bsonType": "string", "description": "区" },
+				"detail": { "bsonType": "string", "description": "详细地址" },
+				"contact": { "bsonType": "string", "description": "联系人" },
+				"phone": { "bsonType": "string", "description": "联系电话" }
+			}
+		},
+		"receiver_address": {
+			"bsonType": "object",
+			"description": "收件人地址信息",
+			"properties": {
+				"province": { "bsonType": "string", "description": "省" },
+				"city": { "bsonType": "string", "description": "市" },
+				"district": { "bsonType": "string", "description": "区" },
+				"detail": { "bsonType": "string", "description": "详细地址" },
+				"contact": { "bsonType": "string", "description": "联系人" },
+				"phone": { "bsonType": "string", "description": "联系电话" }
+			}
+		},
+		"item_type": {
+			"bsonType": "string",
+			"description": "物品类型",
+			"enum": ["文件/证件", "生活用品", "餐饮美食", "鲜花蛋糕", "其他"]
+		},
+		"item_weight": {
+			"bsonType": "double",
+			"description": "物品重量 (kg)",
+			"minimum": 0.1
+		},
+		"total_price": {
+			"bsonType": "double",
+			"description": "订单合计价格",
+			"minimum": 0
+		},
+		"status": {
+			"bsonType": "string",
+			"description": "订单状态",
+			"enum": ["pending", "accepted", "delivering", "completed", "cancelled"],
+			"default": "pending"
+		},
+		"create_time": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

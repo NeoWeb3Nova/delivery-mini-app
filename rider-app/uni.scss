@@ -1,0 +1,84 @@
+/**
+ * 闪电跑腿骑手端 - 全局样式变量
+ *
+ */
+
+/* Material Icons 字体 - 在小程序中需单独在页面中引入 */
+// @import './static/style/icons.scss';
+
+/* 主题色 */
+$uni-color-primary: #ff8c00;
+$uni-color-primary-light: rgba(255, 140, 0, 0.1);
+$uni-color-primary-border: rgba(255, 140, 0, 0.2);
+
+/* 行为相关颜色 */
+$uni-color-success: #22c55e;
+$uni-color-warning: #f59e0b;
+$uni-color-error: #ef4444;
+$uni-color-info: #3b82f6;
+
+/* 文字基本颜色 */
+$uni-text-color: #1e293b;
+$uni-text-color-inverse: #fff;
+$uni-text-color-grey: #64748b;
+$uni-text-color-placeholder: #94a3b8;
+$uni-text-color-disable: #cbd5e1;
+$uni-text-color-secondary: #475569;
+
+/* 背景颜色 */
+$uni-bg-color: #ffffff;
+$uni-bg-color-grey: #f5f5f5;
+$uni-bg-color-light: #f8f7f5;
+$uni-bg-color-dark: #231a0f;
+$uni-bg-color-hover: #f1f1f1;
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4);
+
+/* 边框颜色 */
+$uni-border-color: #e2e8f0;
+$uni-border-color-light: #f1f5f9;
+
+/* 文字尺寸 */
+$uni-font-size-xs: 10px;
+$uni-font-size-sm: 12px;
+$uni-font-size-base: 14px;
+$uni-font-size-md: 16px;
+$uni-font-size-lg: 18px;
+$uni-font-size-xl: 20px;
+$uni-font-size-xxl: 24px;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 20px;
+$uni-img-size-base: 26px;
+$uni-img-size-lg: 40px;
+
+/* Border Radius */
+$uni-border-radius-sm: 4px;
+$uni-border-radius-base: 8px;
+$uni-border-radius-lg: 16px;
+$uni-border-radius-xl: 24px;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-xs: 4px;
+$uni-spacing-row-sm: 8px;
+$uni-spacing-row-base: 10px;
+$uni-spacing-row-md: 16px;
+$uni-spacing-row-lg: 24px;
+$uni-spacing-row-xl: 32px;
+
+/* 垂直间距 */
+$uni-spacing-col-xs: 4px;
+$uni-spacing-col-sm: 8px;
+$uni-spacing-col-base: 10px;
+$uni-spacing-col-md: 16px;
+$uni-spacing-col-lg: 24px;
+$uni-spacing-col-xl: 32px;
+
+/* 阴影 */
+$uni-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.05);
+$uni-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+$uni-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+$uni-shadow-primary: 0 8px 24px rgba(255, 140, 0, 0.3);
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3;
