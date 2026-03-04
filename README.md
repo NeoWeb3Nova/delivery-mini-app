@@ -1,96 +1,232 @@
-# 跑腿小程序 (Delivery Mini App)
+<div align="center">
 
-微信跑腿小程序，包含用户端和骑手端两部分，基于 uniapp 开发。
+# 🚀 Delivery Mini App
 
-## 功能特点
+### 微信跑腿小程序 | WeChat Delivery Mini Program
 
-### 用户端 (user-app)
-- 用户注册登录
-- 位置定位与地图展示
-- 下单叫跑腿服务
-- 订单实时追踪
-- 订单历史记录
-- 在线支付功能
-- 评价骑手服务
+[![Platform](https://img.shields.io/badge/Platform-WeChat%20Mini%20Program-blue?style=flat-square)](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+[![Framework](https://img.shields.io/badge/Framework-uniapp-60C657?style=flat-square)](https://uniapp.dcloud.net.cn/)
+[![Vue](https://img.shields.io/badge/Vue-2.x-42b883?style=flat-square)](https://vuejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Cloud](https://img.shields.io/badge/Cloud-uniCloud-orange?style=flat-square)](https://uniapp.dcloud.net.cn/uniCloud/)
 
-### 骑手端 (rider-app)
-- 骑手注册登录
-- 抢单大厅
-- 订单抢单/接单
-- 订单管理
-- 收入统计
-- 个人信息设置
-- 跑单导航
+*A full-featured delivery platform enabling seamless interaction between customers and riders*
 
-## 技术栈
-
-- **前端框架**: uniapp
-- **开发语言**: Vue.js (Vue 2/3)
-- **目标平台**: 微信小程序
-- **云开发**: uniCloud (阿里云)
-
-## 目录结构
-
-```
-delivery-mini-app/
-├── user-app/           # 用户端小程序
-│   ├── pages/         # 页面目录
-│   ├── components/    # 组件目录
-│   ├── static/        # 静态资源
-│   ├── uni_modules/   # uniapp 模块
-│   ├── uniCloud-aliyun/  # 云函数
-│   ├── pages.json     # 页面配置
-│   ├── manifest.json # 应用配置
-│   └── main.js        # 入口文件
-├── rider-app/         # 骑手端小程序
-│   ├── pages/         # 页面目录
-│   ├── components/    # 组件目录
-│   ├── static/        # 静态资源
-│   ├── uni_modules/   # uniapp 模块
-│   ├── uniCloud-aliyun/  # 云函数
-│   ├── pages.json     # 页面配置
-│   ├── manifest.json # 应用配置
-│   └── main.js        # 入口文件
-└── .gitignore         # Git 忽略配置
-```
-
-## 快速开始
-
-### 环境要求
-
-- Node.js (推荐 v16+)
-- HBuilderX (uniapp 官方开发工具)
-- 微信开发者工具
-
-### 运行项目
-
-1. 下载或克隆项目
-2. 使用 HBuilderX 打开 `user-app` 或 `rider-app` 目录
-3. 点击运行 -> 运行到微信开发者工具
-4. 或点击运行 -> 运行到浏览器
-
-### 微信开发者工具配置
-
-1. 下载并安装 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-2. 在 HBuilderX 中设置微信开发者工具路径
-3. 确保已在微信公众平台注册小程序并获取 AppID
-
-## 界面预览
-
-用户端：
-- 首页（地图下单）
-- 订单列表
-- 个人中心
-
-骑手端：
-- 抢单大厅
-- 订单管理
-- 我的收入
-
-## License
-
-MIT License
+</div>
 
 ---
 
-如有问题，欢迎提交 Issue。
+## 📋 Overview
+
+Delivery Mini App is a comprehensive WeChat mini program that connects customers who need delivery services with available riders. Built with **uniapp** and **Vue.js**, the application provides a complete ecosystem with two dedicated clients:
+
+- **User App** - For customers to place delivery orders
+- **Rider App** - For delivery personnel to accept and fulfill orders
+
+The project leverages **uniCloud** (Aliyun) for serverless backend services, enabling real-time order matching, tracking, and seamless communication between both parties.
+
+---
+
+## ✨ Features
+
+### 🧑‍💼 User App (`user-app/`)
+
+| Feature | Description |
+|---------|-------------|
+| **📍 Location Services** | GPS-based positioning and map integration for precise delivery addresses |
+| **📝 Order Creation** | Intuitive order form with item details, delivery address, and special instructions |
+| **📦 Order Tracking** | Real-time order status updates from placement to completion |
+| **📋 Order History** | Complete order history with filtering and search capabilities |
+| **💳 Payment Integration** | Seamless payment flow for order settlement |
+| **⭐ Rating System** | Post-delivery ratings and feedback for riders |
+| **👤 Profile Management** | User profile, addresses, and preferences management |
+
+**Pages**: Home, Create Order, Order Success, Order List, Orders, Profile, Reservation, Mine
+
+### 🛵 Rider App (`rider-app/`)
+
+| Feature | Description |
+|---------|-------------|
+| **🎯 Order Lobby** | Browse and filter available delivery requests |
+| **📲 One-Click Accept** | Quick order acceptance with haptic feedback |
+| **📊 Order Management** | Active order tracking and history management |
+| **💰 Earnings Dashboard** | Real-time income tracking and statistics |
+| **🗺️ Navigation Integration** | Built-in map navigation to delivery locations |
+| **👤 Profile Settings** | Rider profile, availability status, and preferences |
+
+**Pages**: Home, Active Order, Order Detail, Orders, Profile, Rider Code, Success
+
+### 🔄 Common Components
+
+- **BottomNav** - Customizable bottom navigation bar
+- **OrderCard** - Reusable order display card
+- **TabBar** - Custom tab bar component
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | [uniapp](https://uniapp.dcloud.net.cn/) - Cross-platform mini program framework |
+| **Language** | [Vue.js 2.x](https://vuejs.org/) - Progressive JavaScript framework |
+| **Platform** | WeChat Mini Program |
+| **Backend** | [uniCloud](https://uniapp.dcloud.net.cn/uniCloud/) - Serverless cloud services (Aliyun) |
+| **Database** | NoSQL (MongoDB-compatible via uniCloud) |
+| **UI Components** | uni-ui, SCSS |
+| **Build Tool** | HBuilderX |
+
+---
+
+## 📁 Project Structure
+
+```
+delivery-mini-app/
+│
+├── 📦 user-app/                    # Customer-side application
+│   ├── 📄 pages/                   # Page components
+│   │   ├── index/                  # Home page
+│   │   ├── create-order/           # Order creation
+│   │   ├── order-success/          # Order confirmation
+│   │   ├── orders/                 # Order list
+│   │   ├── order/                  # Order detail
+│   │   ├── profile/                # User profile
+│   │   ├── reservation/            # Scheduled deliveries
+│   │   └── mine/                   # Personal center
+│   │
+│   ├── 🧩 components/              # Reusable components
+│   │   ├── BottomNav/              # Bottom navigation
+│   │   ├── OrderCard/             # Order card component
+│   │   └── TabBar/                # Tab bar
+│   │
+│   ├── 📁 static/                  # Static assets
+│   │   └── tabbar/                 # Tab bar icons
+│   │
+│   ├── ☁️ uniCloud-aliyun/        # Cloud functions & database
+│   │   ├── cloudfunctions/         # Serverless functions
+│   │   └── database/              # Database schemas
+│   │
+│   └── 📄 Configuration
+│       ├── manifest.json           # App configuration
+│       ├── pages.json              # Page routing
+│       └── main.js                 # Entry point
+│
+├── 🛵 rider-app/                   # Rider-side application
+│   ├── 📄 pages/
+│   │   ├── index/                  # Home / Order lobby
+│   │   ├── active-order/          # Current delivery
+│   │   ├── detail/                # Order detail
+│   │   ├── orders/                # Order history
+│   │   ├── profile/               # Rider profile
+│   │   ├── rider-code/            # QR code for customers
+│   │   └── success/               # Delivery complete
+│   │
+│   ├── 🧩 components/
+│   │   └── BottomNav/
+│   │
+│   ├── ☁️ uniCloud-aliyun/
+│   └── 📄 Configuration files
+│
+└── 📝 .gitignore                   # Git ignore rules
+```
+
+---
+
+## 🚦 Getting Started
+
+### Prerequisites
+
+| Requirement | Version | Description |
+|------------|---------|-------------|
+| Node.js | v16+ | JavaScript runtime |
+| HBuilderX | Latest | Official uniapp IDE |
+| WeChat DevTools | Latest | WeChat mini program simulator |
+| WeChat Account | - | Registered mini program (AppID) |
+
+### Installation & Run
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/NeoWeb3Nova/delivery-mini-app.git
+cd delivery-mini-app
+
+# 2. Open in HBuilderX
+# File -> Open Directory -> Select user-app or rider-app
+
+# 3. Run the application
+# Click "Run" -> "Run to Mini Program Simulator" -> "WeChat DevTools"
+```
+
+### WeChat Configuration
+
+1. Download and install [WeChat Developer Tools](https://developers.weixin.qq.com/miniprogram/en/dev/devtools/download.html)
+2. Register a mini program at [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)
+3. Obtain your AppID
+4. Configure `manifest.json` with your AppID
+5. Set WeChat DevTools path in HBuilderX preferences
+
+---
+
+## 📱 Screenshots
+
+> Coming soon...
+
+<!--
+### User App
+| Home | Create Order | Order List | Profile |
+|------|-------------|------------|---------|
+| ![Home]() | ![Create Order]() | ![Orders]() | ![Profile]() |
+
+### Rider App
+| Lobby | Active Order | Orders | Earnings |
+|-------|--------------|--------|----------|
+| ![Lobby]() | ![Active Order]() | ![Orders]() | ![Earnings]() |
+-->
+
+---
+
+## ☁️ Cloud Functions
+
+### User App
+- `order` - Create and manage delivery orders
+
+### Rider App
+- `get-order` - Fetch available orders for riders
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+- 📧 Email: (your email)
+- 🐛 [Open an Issue](https://github.com/NeoWeb3Nova/delivery-mini-app/issues)
+- 💬 Discussion: Start a discussion
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you find it helpful!**
+
+Built with ❤️ using uniapp + Vue.js
+
+</div>
