@@ -180,12 +180,11 @@ delivery-mini-app/
 
 ### Prerequisites
 
-| Requirement | Version | Description |
-|------------|---------|-------------|
-| Node.js | v16+ | JavaScript runtime |
-| HBuilderX | Latest | Official uniapp IDE |
-| WeChat DevTools | Latest | WeChat mini program simulator |
-| WeChat Account | - | Registered mini program (AppID) |
+| Requirement | Description |
+|-------------|-------------|
+| **HBuilderX** | Official uniapp IDE, required. [Download](https://www.dcloud.io/hbuilderx.html) |
+| WeChat DevTools | WeChat mini program simulator. [Download](https://developers.weixin.qq.com/miniprogram/en/dev/devtools/download.html) |
+| WeChat Account | Registered mini program (AppID). [WeChat Official Accounts Platform](https://mp.weixin.qq.com/) |
 
 ### Installation & Run
 
@@ -223,13 +222,66 @@ cd delivery-mini-app
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please follow these steps:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Development Workflow
+
+1. **Install Environment**
+   - Download and install [HBuilderX](https://www.dcloud.io/hbuilderx.html)
+   - Download and install [WeChat Developer Tools](https://developers.weixin.qq.com/miniprogram/en/dev/devtools/download.html)
+
+2. **Fork the Project**
+   - Click the Fork button in the top right corner
+
+3. **Clone the Project**
+   ```bash
+   git clone https://github.com/your-username/delivery-mini-app.git
+   cd delivery-mini-app
+   ```
+
+4. **Create a Branch**
+   ```bash
+   # User app feature
+   git checkout -b feature/user-app-feature-name
+
+   # Rider app feature
+   git checkout -b feature/rider-app-feature-name
+
+   # Bug fix
+   git checkout -b fix/description
+   ```
+
+5. **Develop and Test**
+   - Open `user-app` or `rider-app` directory in HBuilderX
+   - Make changes and run in WeChat DevTools for preview
+
+6. **Commit Changes**
+   ```bash
+   git add .
+   git commit -m 'Describe your changes'
+   ```
+
+7. **Push Branch**
+   ```bash
+   git push origin your-branch-name
+   ```
+
+8. **Create PR**
+   - Create a Pull Request on GitHub
+   - Describe your changes clearly
+
+### Code Standards
+
+- Use Vue 2.x syntax
+- Follow uniapp component conventions
+- Use lowercase and hyphens for page/component names
+- Cloud functions use JavaScript
+
+### Notes
+
+- Ensure code runs properly before submitting PR
+- If modifying cloud functions, include database schema changes
+- Update README if adding new features
 
 ---
 

@@ -180,12 +180,11 @@ delivery-mini-app/
 
 ### 环境要求
 
-| 需求 | 版本 | 说明 |
-|------|------|------|
-| Node.js | v16+ | JavaScript 运行环境 |
-| HBuilderX | 最新版 | uniapp 官方 IDE |
-| 微信开发者工具 | 最新版 | 微信小程序模拟器 |
-| 微信账号 | - | 已注册小程序（AppID） |
+| 需求 | 说明 |
+|------|------|
+| **HBuilderX** | uniapp 官方 IDE，必需开发工具，[下载](https://www.dcloud.io/hbuilderx.html) |
+| 微信开发者工具 | 微信小程序模拟器，[下载](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html) |
+| 微信账号 | 已注册小程序（获取 AppID），[微信公众平台](https://mp.weixin.qq.com/) |
 
 ### 安装运行
 
@@ -223,13 +222,66 @@ cd delivery-mini-app
 
 ## 🤝 贡献指南
 
-欢迎提交贡献！请随时提交 Pull Request。
+欢迎为本项目贡献代码！请遵循以下步骤：
 
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开 Pull Request
+### 开发流程
+
+1. **安装环境**
+   - 下载并安装 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
+   - 下载并安装 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+
+2. ** Fork 项目**
+   - 点击页面右上角的 Fork 按钮
+
+3. **克隆项目**
+   ```bash
+   git clone https://github.com/你的用户名/delivery-mini-app.git
+   cd delivery-mini-app
+   ```
+
+4. **创建分支**
+   ```bash
+   # 用户端功能开发
+   git checkout -b feature/user-app-功能名
+
+   # 骑手端功能开发
+   git checkout -b feature/rider-app-功能名
+
+   # Bug 修复
+   git checkout -b fix/问题描述
+   ```
+
+5. **开发调试**
+   - 用 HBuilderX 打开 `user-app` 或 `rider-app` 目录
+   - 修改代码后在 HBuilderX 中运行到微信开发者工具预览
+
+6. **提交代码**
+   ```bash
+   git add .
+   git commit -m '描述你的更改'
+   ```
+
+7. **推送分支**
+   ```bash
+   git push origin 你的分支名
+   ```
+
+8. **提交 PR**
+   - 在 GitHub 上创建 Pull Request
+   - 描述清楚修改内容和原因
+
+### 代码规范
+
+- 使用 Vue 2.x 语法
+- 遵循 uniapp 组件规范
+- 页面和组件命名使用小写字母和连字符
+- 云函数使用 JavaScript
+
+### 注意事项
+
+- 请确保代码可以正常运行后再提交 PR
+- 如果涉及云函数修改，请一并提交数据库 Schema 变更
+- 更新对应的 README 文档（如果有新增功能）
 
 ---
 
