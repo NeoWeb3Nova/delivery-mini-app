@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Delivery Mini App
+# 🚀 跑腿小程序
 
 ### 微信跑腿小程序 | WeChat Delivery Mini Program
 
@@ -10,223 +10,275 @@
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Cloud](https://img.shields.io/badge/Cloud-uniCloud-orange?style=flat-square)](https://uniapp.dcloud.net.cn/uniCloud/)
 
-*A full-featured delivery platform enabling seamless interaction between customers and riders*
+*一个完整的配送平台，连接用户与骑手，实现无缝的配送体验*
+
+*[English](#english) | [中文](#中文)*
 
 </div>
 
 ---
 
-## 📋 Overview
+## 📋 项目简介
 
-Delivery Mini App is a comprehensive WeChat mini program that connects customers who need delivery services with available riders. Built with **uniapp** and **Vue.js**, the application provides a complete ecosystem with two dedicated clients:
+跑腿小程序是一款功能完备的微信配送平台，连接需要配送服务的用户与配送骑手。项目基于 **uniapp** 和 **Vue.js** 开发，提供两个独立的客户端：
 
-- **User App** - For customers to place delivery orders
-- **Rider App** - For delivery personnel to accept and fulfill orders
+- **用户端** - 用户下单、订单管理、实时追踪
+- **骑手端** - 抢单大厅、订单配送、收入统计
 
-The project leverages **uniCloud** (Aliyun) for serverless backend services, enabling real-time order matching, tracking, and seamless communication between both parties.
-
----
-
-## ✨ Features
-
-### 🧑‍💼 User App (`user-app/`)
-
-| Feature | Description |
-|---------|-------------|
-| **📍 Location Services** | GPS-based positioning and map integration for precise delivery addresses |
-| **📝 Order Creation** | Intuitive order form with item details, delivery address, and special instructions |
-| **📦 Order Tracking** | Real-time order status updates from placement to completion |
-| **📋 Order History** | Complete order history with filtering and search capabilities |
-| **💳 Payment Integration** | Seamless payment flow for order settlement |
-| **⭐ Rating System** | Post-delivery ratings and feedback for riders |
-| **👤 Profile Management** | User profile, addresses, and preferences management |
-
-**Pages**: Home, Create Order, Order Success, Order List, Orders, Profile, Reservation, Mine
-
-### 🛵 Rider App (`rider-app/`)
-
-| Feature | Description |
-|---------|-------------|
-| **🎯 Order Lobby** | Browse and filter available delivery requests |
-| **📲 One-Click Accept** | Quick order acceptance with haptic feedback |
-| **📊 Order Management** | Active order tracking and history management |
-| **💰 Earnings Dashboard** | Real-time income tracking and statistics |
-| **🗺️ Navigation Integration** | Built-in map navigation to delivery locations |
-| **👤 Profile Settings** | Rider profile, availability status, and preferences |
-
-**Pages**: Home, Active Order, Order Detail, Orders, Profile, Rider Code, Success
-
-### 🔄 Common Components
-
-- **BottomNav** - Customizable bottom navigation bar
-- **OrderCard** - Reusable order display card
-- **TabBar** - Custom tab bar component
+项目使用 **uniCloud**（阿里云）提供无服务器后端服务，实现订单实时匹配、状态追踪和双向沟通。
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ 功能特性
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | [uniapp](https://uniapp.dcloud.net.cn/) - Cross-platform mini program framework |
-| **Language** | [Vue.js 2.x](https://vuejs.org/) - Progressive JavaScript framework |
-| **Platform** | WeChat Mini Program |
-| **Backend** | [uniCloud](https://uniapp.dcloud.net.cn/uniCloud/) - Serverless cloud services (Aliyun) |
-| **Database** | NoSQL (MongoDB-compatible via uniCloud) |
-| **UI Components** | uni-ui, SCSS |
-| **Build Tool** | HBuilderX |
+### 🧑‍💼 用户端 (`user-app/`)
+
+| 功能 | 描述 |
+|------|------|
+| 📍 **位置定位** | GPS 定位和地图集成，精准设置配送地址 |
+| 📝 **下单服务** | 简洁的订单表单，支持物品详情、配送地址和备注 |
+| 📦 **订单追踪** | 实时订单状态更新，从下单到完成全程可见 |
+| 📋 **订单历史** | 完整的订单历史记录，支持筛选和搜索 |
+| 💳 **在线支付** | 流畅的支付流程，支持订单结算 |
+| ⭐ **评价系统** | 配送完成后的评分和反馈 |
+| 👤 **个人中心** | 用户资料、收货地址、偏好设置 |
+
+**页面列表**: 首页、下单页面、订单成功、订单列表、订单详情、个人中心、预约配送、我的
+
+### 🛵 骑手端 (`rider-app/`)
+
+| 功能 | 描述 |
+|------|------|
+| 🎯 **抢单大厅** | 浏览和筛选可接的配送订单 |
+| 📲 **一键抢单** | 快速抢单，附带震动反馈 |
+| 📊 **订单管理** | 进行中订单追踪和历史记录 |
+| 💰 **收入统计** | 实时收入统计和明细查看 |
+| 🗺️ **跑单导航** | 内置地图导航，精准到达目的地 |
+| 👤 **个人设置** | 骑手资料、接单状态、偏好配置 |
+
+**页面列表**: 首页（抢单大厅）、进行中订单、订单详情、订单历史、个人中心、骑手码、完成配送
+
+### 🔄 通用组件
+
+- **BottomNav** - 自定义底部导航栏
+- **OrderCard** - 通用订单卡片组件
+- **TabBar** - 自定义标签栏
 
 ---
 
-## 📁 Project Structure
+## 🛠️ 技术栈
+
+| 类别 | 技术 |
+|------|------|
+| 框架 | [uniapp](https://uniapp.dcloud.net.cn/) - 跨平台小程序开发框架 |
+| 语言 | [Vue.js 2.x](https://vuejs.org/) - 渐进式 JavaScript 框架 |
+| 平台 | 微信小程序 |
+| 后端 | [uniCloud](https://uniapp.dcloud.net.cn/uniCloud/) - 无服务器云服务（阿里云） |
+| 数据库 | NoSQL（uniCloud MongoDB 兼容） |
+| UI 组件 | uni-ui、SCSS |
+| 构建工具 | HBuilderX |
+
+---
+
+## 📁 项目结构
 
 ```
 delivery-mini-app/
 │
-├── 📦 user-app/                    # Customer-side application
-│   ├── 📄 pages/                   # Page components
-│   │   ├── index/                  # Home page
-│   │   ├── create-order/           # Order creation
-│   │   ├── order-success/          # Order confirmation
-│   │   ├── orders/                 # Order list
-│   │   ├── order/                  # Order detail
-│   │   ├── profile/                # User profile
-│   │   ├── reservation/            # Scheduled deliveries
-│   │   └── mine/                   # Personal center
+├── 📦 user-app/                    # 用户端小程序
+│   ├── 📄 pages/                   # 页面组件
+│   │   ├── index/                  # 首页
+│   │   ├── create-order/           # 下单页面
+│   │   ├── order-success/          # 订单成功
+│   │   ├── orders/                 # 订单列表
+│   │   ├── order/                  # 订单详情
+│   │   ├── profile/                # 个人中心
+│   │   ├── reservation/            # 预约配送
+│   │   └── mine/                   # 我的
 │   │
-│   ├── 🧩 components/              # Reusable components
-│   │   ├── BottomNav/              # Bottom navigation
-│   │   ├── OrderCard/             # Order card component
-│   │   └── TabBar/                # Tab bar
+│   ├── 🧩 components/              # 可复用组件
+│   │   ├── BottomNav/              # 底部导航
+│   │   ├── OrderCard/              # 订单卡片
+│   │   └── TabBar/                 # 标签栏
 │   │
-│   ├── 📁 static/                  # Static assets
-│   │   └── tabbar/                 # Tab bar icons
+│   ├── 📁 static/                  # 静态资源
+│   │   └── tabbar/                 # 标签栏图标
 │   │
-│   ├── ☁️ uniCloud-aliyun/        # Cloud functions & database
-│   │   ├── cloudfunctions/         # Serverless functions
-│   │   └── database/              # Database schemas
+│   ├── ☁️ uniCloud-aliyun/        # 云函数和数据库
+│   │   ├── cloudfunctions/         # 云函数
+│   │   └── database/               # 数据库 Schema
 │   │
-│   └── 📄 Configuration
-│       ├── manifest.json           # App configuration
-│       ├── pages.json              # Page routing
-│       └── main.js                 # Entry point
+│   └── 📄 配置文件
+│       ├── manifest.json           # 应用配置
+│       ├── pages.json              # 页面路由
+│       └── main.js                 # 入口文件
 │
-├── 🛵 rider-app/                   # Rider-side application
+├── 🛵 rider-app/                   # 骑手端小程序
 │   ├── 📄 pages/
-│   │   ├── index/                  # Home / Order lobby
-│   │   ├── active-order/          # Current delivery
-│   │   ├── detail/                # Order detail
-│   │   ├── orders/                # Order history
-│   │   ├── profile/               # Rider profile
-│   │   ├── rider-code/            # QR code for customers
-│   │   └── success/               # Delivery complete
+│   │   ├── index/                  # 首页 / 抢单大厅
+│   │   ├── active-order/           # 进行中订单
+│   │   ├── detail/                 # 订单详情
+│   │   ├── orders/                 # 订单历史
+│   │   ├── profile/                # 骑手资料
+│   │   ├── rider-code/             # 骑手二维码
+│   │   └── success/                # 配送完成
 │   │
 │   ├── 🧩 components/
 │   │   └── BottomNav/
 │   │
 │   ├── ☁️ uniCloud-aliyun/
-│   └── 📄 Configuration files
+│   └── 📄 配置文件
 │
-└── 📝 .gitignore                   # Git ignore rules
+└── 📝 .gitignore                   # Git 忽略规则
 ```
 
 ---
 
-## 🚦 Getting Started
+## 🚦 快速开始
 
-### Prerequisites
+### 环境要求
 
-| Requirement | Version | Description |
-|------------|---------|-------------|
-| Node.js | v16+ | JavaScript runtime |
-| HBuilderX | Latest | Official uniapp IDE |
-| WeChat DevTools | Latest | WeChat mini program simulator |
-| WeChat Account | - | Registered mini program (AppID) |
+| 需求 | 版本 | 说明 |
+|------|------|------|
+| Node.js | v16+ | JavaScript 运行环境 |
+| HBuilderX | 最新版 | uniapp 官方 IDE |
+| 微信开发者工具 | 最新版 | 微信小程序模拟器 |
+| 微信账号 | - | 已注册小程序（AppID） |
 
-### Installation & Run
+### 安装运行
 
 ```bash
-# 1. Clone the repository
+# 1. 克隆仓库
 git clone https://github.com/NeoWeb3Nova/delivery-mini-app.git
 cd delivery-mini-app
 
-# 2. Open in HBuilderX
-# File -> Open Directory -> Select user-app or rider-app
+# 2. 用 HBuilderX 打开
+# 文件 -> 打开目录 -> 选择 user-app 或 rider-app
 
-# 3. Run the application
-# Click "Run" -> "Run to Mini Program Simulator" -> "WeChat DevTools"
+# 3. 运行应用
+# 点击"运行" -> "运行到小程序模拟器" -> "微信开发者工具"
 ```
 
-### WeChat Configuration
+### 微信配置
 
-1. Download and install [WeChat Developer Tools](https://developers.weixin.qq.com/miniprogram/en/dev/devtools/download.html)
-2. Register a mini program at [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)
-3. Obtain your AppID
-4. Configure `manifest.json` with your AppID
-5. Set WeChat DevTools path in HBuilderX preferences
-
----
-
-## 📱 Screenshots
-
-> Coming soon...
-
-<!--
-### User App
-| Home | Create Order | Order List | Profile |
-|------|-------------|------------|---------|
-| ![Home]() | ![Create Order]() | ![Orders]() | ![Profile]() |
-
-### Rider App
-| Lobby | Active Order | Orders | Earnings |
-|-------|--------------|--------|----------|
-| ![Lobby]() | ![Active Order]() | ![Orders]() | ![Earnings]() |
--->
+1. 下载并安装 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+2. 在 [微信公众平台](https://mp.weixin.qq.com/) 注册小程序
+3. 获取你的 AppID
+4. 在 `manifest.json` 中配置你的 AppID
+5. 在 HBuilderX 偏好设置中设置微信开发者工具路径
 
 ---
 
-## ☁️ Cloud Functions
+## 📱 界面预览
 
-### User App
-- `order` - Create and manage delivery orders
-
-### Rider App
-- `get-order` - Fetch available orders for riders
+> 即将添加...
 
 ---
 
-## 🤝 Contributing
+## ☁️ 云函数
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### 用户端
+- `order` - 创建和管理配送订单
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### 骑手端
+- `get-order` - 获取可接订单列表
 
 ---
 
-## 📄 License
+## 🤝 贡献指南
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+欢迎提交贡献！请随时提交 Pull Request。
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 打开 Pull Request
 
 ---
 
-## 📞 Support
+## 📄 许可证
 
-If you encounter any issues or have questions:
+本项目基于 MIT 许可证开源 - 查看 [LICENSE](LICENSE) 文件了解更多。
 
-- 📧 Email: (your email)
-- 🐛 [Open an Issue](https://github.com/NeoWeb3Nova/delivery-mini-app/issues)
-- 💬 Discussion: Start a discussion
+---
+
+## 📞 支持
+
+如果遇到任何问题或有疑问：
+
+- 🐛 [提交 Issue](https://github.com/NeoWeb3Nova/delivery-mini-app/issues)
+- 💬 讨论：发起讨论
 
 ---
 
 <div align="center">
 
-**⭐ Star this repository if you find it helpful!**
+**⭐ 如果对你有帮助，请为本项目点个 Star！**
 
-Built with ❤️ using uniapp + Vue.js
+由 ❤️ 使用 uniapp + Vue.js 构建
 
 </div>
+
+---
+
+<hr/>
+
+<a name="english"></a>
+
+## 📋 Overview
+
+Delivery Mini App is a comprehensive WeChat delivery platform that connects customers who need delivery services with delivery riders. Built with **uniapp** and **Vue.js**, the application provides two dedicated clients:
+
+- **User App** - Place orders, manage orders, real-time tracking
+- **Rider App** - Order lobby, delivery management, earnings statistics
+
+The project leverages **uniCloud** (Aliyun) for serverless backend services, enabling real-time order matching, status tracking, and seamless communication between both parties.
+
+### Key Features
+
+#### User App (`user-app/`)
+- 📍 Location Services - GPS positioning and map integration
+- 📝 Order Creation - Intuitive order forms
+- 📦 Order Tracking - Real-time status updates
+- 📋 Order History - Complete order records
+- 💳 Payment Integration - Seamless payments
+- ⭐ Rating System - Post-delivery ratings
+- 👤 Profile Management - User settings
+
+#### Rider App (`rider-app/`)
+- 🎯 Order Lobby - Browse available orders
+- 📲 One-Click Accept - Quick order acceptance
+- 📊 Order Management - Active & history
+- 💰 Earnings Dashboard - Income tracking
+- 🗺️ Navigation - Built-in map navigation
+- 👤 Profile Settings - Rider preferences
+
+### Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | uniapp |
+| Language | Vue.js 2.x |
+| Platform | WeChat Mini Program |
+| Backend | uniCloud (Aliyun) |
+| UI | uni-ui, SCSS |
+| IDE | HBuilderX |
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/NeoWeb3Nova/delivery-mini-app.git
+cd delivery-mini-app
+
+# Open in HBuilderX
+# File -> Open Directory -> Select user-app or rider-app
+
+# Run
+# Click "Run" -> "Run to Mini Program Simulator" -> "WeChat DevTools"
+```
+
+### License
+
+MIT License - see [LICENSE](LICENSE) for details.
