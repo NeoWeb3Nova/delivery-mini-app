@@ -12,7 +12,7 @@
 
 *一个完整的配送平台，连接用户与骑手，实现无缝的配送体验*
 
-*[English](#english) | [中文](#中文)*
+*[English](./README_en.md)*
 
 </div>
 
@@ -104,7 +104,7 @@ delivery-mini-app/
 │   ├── 📁 static/                  # 静态资源
 │   │   └── tabbar/                 # 标签栏图标
 │   │
-│   ├── ☁️ uniCloud-aliyun/        # 云函数和数据库
+│   ├── ☁️ uniCloud-aliyun/          # 云函数和数据库
 │   │   ├── cloudfunctions/         # 云函数
 │   │   └── database/               # 数据库 Schema
 │   │
@@ -219,66 +219,3 @@ cd delivery-mini-app
 由 ❤️ 使用 uniapp + Vue.js 构建
 
 </div>
-
----
-
-<hr/>
-
-<a name="english"></a>
-
-## 📋 Overview
-
-Delivery Mini App is a comprehensive WeChat delivery platform that connects customers who need delivery services with delivery riders. Built with **uniapp** and **Vue.js**, the application provides two dedicated clients:
-
-- **User App** - Place orders, manage orders, real-time tracking
-- **Rider App** - Order lobby, delivery management, earnings statistics
-
-The project leverages **uniCloud** (Aliyun) for serverless backend services, enabling real-time order matching, status tracking, and seamless communication between both parties.
-
-### Key Features
-
-#### User App (`user-app/`)
-- 📍 Location Services - GPS positioning and map integration
-- 📝 Order Creation - Intuitive order forms
-- 📦 Order Tracking - Real-time status updates
-- 📋 Order History - Complete order records
-- 💳 Payment Integration - Seamless payments
-- ⭐ Rating System - Post-delivery ratings
-- 👤 Profile Management - User settings
-
-#### Rider App (`rider-app/`)
-- 🎯 Order Lobby - Browse available orders
-- 📲 One-Click Accept - Quick order acceptance
-- 📊 Order Management - Active & history
-- 💰 Earnings Dashboard - Income tracking
-- 🗺️ Navigation - Built-in map navigation
-- 👤 Profile Settings - Rider preferences
-
-### Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| Framework | uniapp |
-| Language | Vue.js 2.x |
-| Platform | WeChat Mini Program |
-| Backend | uniCloud (Aliyun) |
-| UI | uni-ui, SCSS |
-| IDE | HBuilderX |
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/NeoWeb3Nova/delivery-mini-app.git
-cd delivery-mini-app
-
-# Open in HBuilderX
-# File -> Open Directory -> Select user-app or rider-app
-
-# Run
-# Click "Run" -> "Run to Mini Program Simulator" -> "WeChat DevTools"
-```
-
-### License
-
-MIT License - see [LICENSE](LICENSE) for details.
